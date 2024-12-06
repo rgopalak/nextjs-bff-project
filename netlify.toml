@@ -1,0 +1,11 @@
+// netlify.toml
+[build]
+  command = "npm run build"
+  functions = "functions"
+  publish = "frontend/.next"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/bff/:splat"
+  status = 200
+  
